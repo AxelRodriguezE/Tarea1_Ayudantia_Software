@@ -1,0 +1,214 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.3 (9/9/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[twoside]{article}
+
+\usepackage{lipsum} % Package to generate dummy text throughout this template
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\Roman{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Ingenier\'ia de Software $\bullet$ Octubre 2013 $\bullet$ Tarea 1 Ayudant\'ia} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Metodolog\'ias de Desarrollo de Software}} % Article title
+
+\author{
+\large
+\textsc{Axel Rodr\'iguez Espinoza}\\[2mm] % Your name
+\textsc{Nicolas Oyarzun Hernandez}\\[2mm] % Your name
+\textsc{Pedro Salas Vergara}\\[2mm] % Your name
+\normalsize Universidad Tecnol\'ogica Metropolitana \\ % Your institution
+\vspace{-5mm}
+}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+
+Metodolog\'ia de desarrollo de software se describe como el conjunto de herramientas, t\'ecnicas, procedimientos y soporte documental para el dise\~no de Sistemas de informaci\'on.
+
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\begin{multicols}{2} % Two-column layout throughout the main article text
+
+\section{Introducci\'on}
+
+Particularmente, como ingenier\'ia de software, una metodolog\'ia se basa en una combinaci\'on de los modelos de proceso gen\'ericos para obtener como beneficio un software que soluciones un problema. Adicionalmente una metodolog\'ia deber\'ia definir con precisi\'on los artefactos, roles y actividades, junto con pr\'acticas, t\'ecnicas recomendadas y gu\'ias de adaptaci\'on de la metodolog\'ia al proyecto. Sin embargo, la complejidad del proceso de creaci\'on de software es netamente dependiente de la naturaleza del proyecto mismo, por lo que el escogimiento de la metodolog\'ia estar\'a acorde al nivel de aporte del proyecto, ya sea peque\~no, mediano o de gran nivel.
+%------------------------------------------------
+
+\section{Metodolog\'ias}
+
+\textbf{\subsection{Metodolog\'ia Cascada}}
+Tambi\'en conocido como modelo en cascada, esta metodolog\'ia se enfoca en generar un orden riguroso en torno a etapas temporales que se aplican en el proceso de desarrollo de un software, de tal forma que al finalizar una fase, se comienza la siguiente tomando como datos de entrada los resultados de la anterior. En cada etapa del modelo se va detallando y perfeccionando el desarrollo, con la finalidad de obtener un c\'odigo eficaz y eficiente que satisfaga las necesidades (requisitos previamente determinados).\\
+
+1.- An\'alisis de requisitos ->
+2.- Dise\~no del Sistema ->
+3.- Dise\~no del Programa ->
+4.- Codificaci\'on ->
+5.- Pruebas ->
+6.- Implantaci\'on ->
+7.- Mantenimiento ->
+\\
+
+An\'alisis de requerimientos\\
+
+Se analizan las necesidades del usuario final del software, con el objetivo de determinar los objetivos espec\'ificos de este. Es importante que se realice una documentaci\'on completa y consensuar estos los requerimientos de modo que la proyecci\'on del desarrollo sea lo correcto (ya que no puede sufrir modificaciones de este tipo en etapas futuras).\\
+
+Se analizan los requisitos del usuario, donde su objetivo es determinar los servicios que debe ofrecer el sistema para satisfacer las necesidades de este, se crea un documento de requisitos de usuario (DRU) para ser validado al finalizar el desarrollo. Tambi\'en se analizan los requisitos del sistema, que es b\'asicamente la construcci\'on de un modelo l\'ogico de software que describe las funciones necesarias para resolver el problema y sus relaciones (no se toma en cuenta el como se implementar\'a).\\
+
+Dise\~no del sistema\\
+
+Se desglosa el sistema para que pueda elaborarse por separado. Esto se plasma en un documento de dise\~no de software, que describe la estructura relacional del sistema y lo que debe hacer cada una de sus partes, como tambi\'en sus combinaciones. 
+Se define la estructura de la soluci\'on, con sus m\'odulos y relaciones. Con esto se define la arquitectura de la soluci\'on. Una vez realizado se definen los algoritmos y la organizaci\'on del c\'odigo para comenzar la implementaci\'on.\\
+
+Codificaci\'on o Programaci\'on\\
+
+Como lo dice el nombre de la etapa, es la fase de programaci\'on, donde se implementa el c\'odigo fuente, dando paso a ensayos constantes para la correcci\'on de errores. Se crean librer\'ias y funciones que puedan ser reutilizadas para llevar a cabo procesos mas r\'apidos.\\
+
+Pruebas\\
+
+Se arma el sistema y se comprueba el funcionamiento efectivo de este.\\
+
+Implantaci\'on\\
+
+Se pone en marcha la implantaci\'on del software, tomando en cuenta la documentaci\'on en torno al software y hardware que componen el proyecto.\\
+
+Mantenimiento\\
+
+El sistema -ya en funcionamiento- puede sufrir cambios en la medida que el usuario sienta la necesidad de solucionar errores o incorporar mejoras a este.\\
+ 
+Dentro de las caracter\'isticas del modelo, importante es entender que mientras se necesiten realizar modificaciones en cualquiera de las etapas, se deben volver a recorrer las siguientes para llegar a la nueva soluci\'on. Tambi\'en es riguroso con respecto a la revisi\'on del proceso para cada fase, esto determinar\'a si pasa a la siguiente o no.
+
+\textbf{\subsection{Metodolog\'ia Scrum}}
+
+Scrum es una metodolog\'ia \'agil de gesti\'on de proyectos cuyo objetivo primordial es elevar al m\'aximo la productividad de un equipo, fue desarrollado por Jeff Sutherland y elaborado m\'as formalmente por Ken Schwaber. Se enfoca en el hecho de que procesos definidos y repetibles s\'olo funcionan para atacar problemas definidos y repetibles con gente definida y repetible en ambientes definidos y repetibles. Y se divide un proyecto en iteraciones (que ellos llaman carreras cortas) de 30 d\'ias. La literatura de Scrum se orienta principalmente en la planeaci\'on iterativa y el seguimiento del proceso.\\
+
+Caaracter\'isticas\\
+
+\begin{itemize}
+\item 
+	Enfatiza valores y pr\'acticas de gesti\'on, sin pronunciarse sobre requerimientos, pr\'acticas de desarrollo, implementaci\'on y dem\'as cuestiones t\'ecnicas.
+\item 
+	Hace uso de Equipos auto-dirigidos y auto-organizados.
+\item
+	Puede ser aplicado te\'oricamente a cualquier contexto en donde un grupo de gente necesita trabajar junta para lograr una meta com\'un. 
+\item
+	Desarrollo de software iterativos incrementales basados en pr\'acticas \'agiles.
+\item
+	Iteraciones de treinta d\'ias; aunque se pueden realizar con m\'as frecuencia, estas iteraciones, conocidas como Sprint.
+\item
+	Dentro de cada Sprint se denomina el Scrum Master al L\'ider de Proyecto quien llevar\'i a cabo la gesti\'on de la iteraci\'on.
+\item
+	Se convocan diariamente un Scrum Daily Meeting  el cual representa una reuni\'on de avance diaria de no m\'as de 15 minutos con el prop\'osito de tener realimentaci\'on sobre las tareas de los recursos y los obst\'aculos que se presentan.\\
+\end{itemize}
+
+En cuanto al ciclo de vida del modelo Scrum es el siguiente:\\
+
+\begin{enumerate}
+\item 
+Pre-Juego / Planeamiento: El prop\'osito es establecer la visi\'on, definir expectativas y asegurarse la financiaci\'on. Las actividades son la escritura de la visi\'on, el presupuesto, el registro de acumulaci\'on o retraso Metodolog\'ias \'Agiles (backlog) del producto inicial y los \'items estimados, as\'i como la arquitectura de alto nivel, el dise\'no exploratorio y los prototipos. El registro de acumulaci\'on es de alto nivel de abstracci\'on. 
+\item 
+Pre-Juego / Montaje (Staging): El prop\'osito es identificar m\'as requerimientos y priorizar las tareas para la primera iteraci\'on. Las actividades son planificaci\'on, dise\'no exploratorio y prototipos. 
+\item 
+Juego / Desarrollo: El prop\'osito es implementar un sistema listo para entrega en una serie de iteraciones de treinta d\'ias llamadas corridas (sprints). Las actividades son un encuentro de planeamiento de corridas en cada iteraci\'on, la definici\'on del registro de acumulaci\'on de corridas y los estimados, y encuentros diarios de Scrum. 
+\item 
+Pos-Juego/ Liberaci\'on: El prop\'osito es el despliegue operacional. Las actividades, documentaci\'on, entrenamiento, mercadeo y venta.\\\\\\
+\end{enumerate}
+
+\textbf{\section{Diferencias entre los modelos de proceso tradicional y \'agil}
+}
+\textbf{Metodolog\'ia \'agil:}\\
+\begin{itemize}
+\item Est\'an basadas en heur\'istica provenientes de pr\'acticas de producci\'on de c\'odigos. 
+\item Est\'an preparadas para cambios durante el proyecto. 
+\item Son impuestas internamente (por el equipo). 
+\item Proceso menos controlado. 
+\item No existe contrato tradicional.
+\item Son bastante flexibles. 
+\item El cliente es parte del equipo de desarrollo. 
+\item Grupos peque\'nos y trabajando en el mismo sitio. 
+\item Menos \'enfasis en la arquitectura del software. 
+\end{itemize}
+
+\textbf{Metodolog\'ia tradicional:} 
+\begin{itemize}
+\item Basadas en normas provenientes de est\'andares. 
+\item Presentan cierta resistencia a los cambios. 
+\item Impuestas externamente. 
+\item Proceso mucho m\'as controlado, con numerosas pol\'iticas. 
+\item Existe un contrato prefijado. 
+\item Son un poco r\'igidas. 
+\item El cliente interact\'ua con el equipo de desarrollo mediante reuniones. 
+\item Grupos grandes y posiblemente distribuidos. 
+\item La arquitectura del software es esencial y se expresa mediante modelos. 
+
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+
+\end{multicols}
+
+\end{document}
